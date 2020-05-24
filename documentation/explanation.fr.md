@@ -16,7 +16,7 @@ SHA-2 signifie **Secure Hash Algorithm 2**
 
 - Une [fonction de hachage](https://fr.wikipedia.org/wiki/Fonction_de_hachage) est une fonction qui crée une empreinte numérique à taille fixe de n’importe quelle donnée.
 - Le SHA-256 retourne une empreinte numérique ou hash de 256 bits. (32 bytes/octets)
-- Le hachage peut servir pour offusqué les mots de passe ou pour verifier l’intégrité d’une donnée.
+- Le hachage peut servir pour obfusqué les mots de passe ou pour vérifier l’intégrité d’une donnée.
 
 
 
@@ -34,7 +34,7 @@ L'algorithme traite des blocs de 512 bits/64 octets, si un bloc n'a pas cette ta
 
 On initialise 8 variables qui contient chaque partie du hash.
 
-Ces variables vont être altérer fréquemment, pour augmenter l'entropie.
+Ces variables vont être altéré fréquemment, pour augmenter l'entropie.
 
 ```
 State1 = 0x6a09e667
@@ -106,8 +106,8 @@ Le padding se fait en trois étape:
 
 
 
-Representation simple: `abc 1 0000000000...000000000000 3`  
-Representation binaire: `01100001 01100010 01100011 10000000 0000000 … 0000000 0000000 0000000 … 0000011`
+Représentation simple: `abc 1 0000000000...000000000000 3`  
+Représentation binaire: `01100001 01100010 01100011 10000000 0000000 … 0000000 0000000 0000000 … 0000011`
 
 <img align="left" src="./assets/padding.png" width="800" alt=""/>
 
@@ -123,20 +123,20 @@ Chaque `mots` fait 32bits/4octets.
 
 #### 4. Création du tableau de mots
 
-On créer un tableau de 64 blocs de 32bits/4octets.
+On crée un tableau de 64 blocs de 32bits/4octets.
 
 `W[64]`
 
-On insère les 16 mots de la données dans les 16 premier blocs.
+On insère les 16 mots de la données dans les 16 premiers blocs.
 
 ```
 De 0 à 15: index
 	W[index] = data[index]
 ```
 
-Ensuite de 16 à 64, on ce sert des mots precedent insère pour en créer de nouveaux.
+Ensuite de 16 à 64, on se sert des mots précèdent insère pour en créer de nouveaux.
 
-Les fonctions logique `σ0` (sigma0) et `σ1` (sigma1) sont utilisée.
+Les fonctions logiques `σ0` (sigma0) et `σ1` (sigma1) sont utilisées.
 
 ```
 De 16 à 48: index
@@ -182,7 +182,7 @@ De 0 à 64: index
 
 
 
-Et pour finir, on ajoute la valeurs des variables on `State`
+Et pour finir, on ajoute la valeur des variables on `State`
 
 ```
 State1 = State1 + a
