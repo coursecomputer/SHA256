@@ -47,7 +47,7 @@ State7 = 0x1f83d9ab
 State8 = 0x5be0cd19
 ```
 
-On initialise un tableau qui contiendra 64 valeurs constantes 32bits/4octets.
+On initialise un tableau qui contiendra 64 valeurs constantes 32 bits/4 octets.
 
 ```
 K = [
