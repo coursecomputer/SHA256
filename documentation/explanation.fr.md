@@ -24,7 +24,7 @@ SHA-2 signifie **Secure Hash Algorithm 2**
 
 L'algorithme traite des blocs de 512 bits/64 octets, si un bloc n'a pas cette taille (comme la fin d'un message ou le message n'est pas assez long), alors un padding sera fait sur le bloc pour qu'il atteigne la taille de 512 bits/64 octets.
 
-<img align="left" src="./assets/blocs.png" width="800" alt=""/>
+<img src="./assets/blocs.png" width="800" alt=""/>
 
 
 
@@ -109,7 +109,7 @@ Le padding se fait en trois étape:
 Représentation simple: `abc 1 0000000000...000000000000 3`  
 Représentation binaire: `01100001 01100010 01100011 10000000 0000000 … 0000000 0000000 0000000 … 0000011`
 
-<img align="left" src="./assets/padding.png" width="800" alt=""/>
+<img src="./assets/padding.png" width="800" alt=""/>
 
 
 
@@ -119,7 +119,7 @@ Chaque blocs de 512 bits/64 octets est découpé en plus petit bloc appelé des 
 
 Chaque `mots` fait 32bits/4octets.
 
-<img align="left" src="./assets/words.png" width="800" alt=""/>
+<img src="./assets/words.png" width="800" alt=""/>
 
 #### 4. Création du tableau de mots
 
@@ -203,4 +203,4 @@ Quand toutes la données est passée, on concatène les valeurs du `State` pour 
 
 
 
-<img align="left" src="./assets/concatenation.png" width="800" alt=""/>
+<img src="./assets/concatenation.png" width="800" alt=""/>

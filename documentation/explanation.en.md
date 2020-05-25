@@ -23,7 +23,7 @@ SHA-2 meaning **Secure Hash Algorithm 2**
 
 The algorithm handles blocks of 512 bits/64 bytes, if a block does not have this size (like the end of a message or the message is not long enough), then a padding will be done on the block to make it reach the size of 512 bits/64 bytes.
 
-<img align="left" src="./assets/blocs.png" width="800" alt=""/>
+<img src="./assets/blocs.png" width="800" alt=""/>
 
 
 
@@ -108,7 +108,7 @@ The padding is done in three stages:
 Simple representation: `abc 1 0000000000...000000000000 3`  
 Binary representation: `01100001 01100010 01100011 10000000 0000000 … 0000000 0000000 0000000 … 0000011`
 
-<img align="left" src="./assets/padding.png" width="800" alt=""/>
+<img src="./assets/padding.png" width="800" alt=""/>
 
 
 
@@ -118,7 +118,7 @@ Each block of 512 bits/64 bytes is split into smaller blocks called "words".
 
 Each `word` is 32 bits/4 bytes.
 
-<img align="left" src="./assets/words.png" width="800" alt=""/>
+<img src="./assets/words.png" width="800" alt=""/>
 
 #### 4. Creating the word table
 
@@ -202,4 +202,4 @@ When all the data is passed, we concatenate the `State` values to form the hash.
 
 
 
-<img align="left" src="./assets/concatenation.png" width="800" alt=""/>
+<img src="./assets/concatenation.png" width="800" alt=""/>
